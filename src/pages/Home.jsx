@@ -9,9 +9,11 @@ import Button from '../components/Button'
 import { useContext } from 'react'
 import BlogContext from '../context/BlogContext'
 import CallToAction from '../components/CallToAction'
+import BlogPost from '../components/BlogPost'
+import Footer from '../components/shared/Footer'
 
 function Home() {
-  const {featuredProducts} = useContext(BlogContext)
+  const {featuredProducts, blogPosts} = useContext(BlogContext)
 
   return (
     <>
@@ -67,7 +69,6 @@ function Home() {
               if (index % 2 !== 0) {
                 return <FeaturedItem key={index} featuredItem={featuredItem} marginTop={true} />
               }
-
               return <FeaturedItem key={index} featuredItem={featuredItem} />
             })}
             </div>
@@ -75,9 +76,30 @@ function Home() {
         </section>
 
       </div>
-        <section id="call-to-action" className='mt-32'>
-          <CallToAction />
+
+      <section id="call-to-action" className='mt-32'>
+        <CallToAction />
+      </section>
+
+      <div className="container mx-auto px-5">
+        <section id="blog" className='mt-24'>
+          <div className="space-y-16">
+            <Heading title='Skincare Blog' subTitle='Learn all the tips, tricks, and secrets to healthy and glowy skin' />
+
+            <div className="grid gap-8 grid-rows-1 md:grid-rows-1 md:grid-cols-3 lg:gap-0">
+              {blogPosts.map((blogItem, index)=>(
+                <BlogPost key={index} blogItem={blogItem} />
+              ))}
+            </div>
+
+          </div>
         </section>
+
+      </div>
+
+      <section id="footer" className='mt-32'>
+        <Footer />
+      </section>
     </>
   )
 }

@@ -24,7 +24,7 @@ function Navbar() {
           <li onClick={() => handleClickScroll('home')} className="font-nunito duration-300 text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Home</li>
           <li onClick={() => handleClickScroll('featured')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Featured</li>
           <li onClick={() => handleClickScroll('blog')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Blog</li>
-          <li onClick={() => handleClickScroll('contact')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Contact</li>
+          <li onClick={() => handleClickScroll('call-to-action')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Subscribe</li>
         </ul>
 
         {/* Hamburger icon */}
@@ -42,7 +42,7 @@ function Navbar() {
       <li onClick={() => handleClickScroll('home')} className="font-nunito duration-300 text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Home</li>
       <li onClick={() => handleClickScroll('featured')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Featured</li>
       <li onClick={() => handleClickScroll('blog')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Blog</li>
-      <li onClick={() => handleClickScroll('contact')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Contact</li>
+      <li onClick={() => handleClickScroll('call-to-action')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Subscribe</li>
     </ul>
     </>
   )
