@@ -23,7 +23,7 @@ function CallToAction() {
 
           <div className="flex space-x-2 w-full">
             <input placeholder='name@email.com' value={email} required onChange={handleChange} type="email" className="bg-white flex-1 py-3 px-5 text-black placeholder:text-graphite font-nunito focus:outline-none" />
-            <Button>SEND</Button>
+            <Button size="small">SEND</Button>
           </div>
 
         </div>
