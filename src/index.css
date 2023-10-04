@@ -8,3 +8,58 @@
 body {
   background-color: #FFF1F0;
 }
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  /* Make it appear like they are in a single line stacked above each other*/
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  transform: rotate(0);
+  transition: all 0.5s;
+  background: #481313 !important;
+
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background: #481313 !important;
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background: #481313 !important;
+}
+
+#menu {
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
