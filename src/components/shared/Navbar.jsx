@@ -20,10 +20,10 @@ function Navbar() {
       <div className="flex justify-between pt-10">
         <span className="font-garamond text-maroonDark text-3xl italic font-semibold">skinBliss</span>
         <ul className="hidden space-x-10 md:flex">
-          <li onClick={() => handleClickScroll('home')} className="font-nunito duration-300 text-maroonDark hover:font-bold hover:cursor-pointer">Home</li>
-          <li onClick={() => handleClickScroll('featured')} className="font-nunito text-maroonDark hover:font-bold hover:cursor-pointer">Featured</li>
-          <li onClick={() => handleClickScroll('blog')} className="font-nunito text-maroonDark hover:font-bold hover:cursor-pointer">Blog</li>
-          <li onClick={() => handleClickScroll('contact')} className="font-nunito text-maroonDark hover:font-bold hover:cursor-pointer">Contact</li>
+          <li onClick={() => handleClickScroll('home')} className="font-nunito duration-300 text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Home</li>
+          <li onClick={() => handleClickScroll('featured')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Featured</li>
+          <li onClick={() => handleClickScroll('blog')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Blog</li>
+          <li onClick={() => handleClickScroll('contact')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Contact</li>
         </ul>
 
         {/* Hamburger icon */}
@@ -38,10 +38,10 @@ function Navbar() {
     </nav>
 
     <ul id="menu" onClick={toggleMenu} className={`text-white fixed z-[99] top-0 bottom-0 left-0 hidden flex-col w-full min-h-screen items-center font-sans space-y-5 justify-center text-2xl bg-white bg-opacity-20 md:hidden` }>
-      <li onClick={() => handleClickScroll('home')} className="font-nunito duration-300 text-maroonDark hover:font-bold hover:cursor-pointer">Home</li>
-      <li onClick={() => handleClickScroll('featured')} className="font-nunito text-maroonDark hover:font-bold hover:cursor-pointer">Featured</li>
-      <li onClick={() => handleClickScroll('blog')} className="font-nunito text-maroonDark hover:font-bold hover:cursor-pointer">Blog</li>
-      <li onClick={() => handleClickScroll('contact')} className="font-nunito text-maroonDark hover:font-bold hover:cursor-pointer">Contact</li>
+      <li onClick={() => handleClickScroll('home')} className="font-nunito duration-300 text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Home</li>
+      <li onClick={() => handleClickScroll('featured')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Featured</li>
+      <li onClick={() => handleClickScroll('blog')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Blog</li>
+      <li onClick={() => handleClickScroll('contact')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Contact</li>
     </ul>
     </>
   )
