@@ -8,6 +8,10 @@ import post2img3 from '../assets/imgs/blog-2-img-3.jpg'
 import post3img1 from '../assets/imgs/blog-3-img-1.jpg'
 import post3img2 from '../assets/imgs/blog-3-img-2.jpg'
 import post3img3 from '../assets/imgs/blog-3-img-3.jpg'
+import featuredImg1 from '../assets/imgs/featured-img-1.jpg'
+import featuredImg2 from '../assets/imgs/featured-img-2.jpg'
+import featuredImg3 from '../assets/imgs/featured-img-3.jpg'
+import featuredImg4 from '../assets/imgs/featured-img-4.jpg'
 
 const BlogContext = createContext()
 
@@ -42,8 +46,36 @@ export const BlogProvider = ({children}) => {
     }
   ])
 
+  const featuredProducts = [
+    {
+      id: 1,
+      title: 'Peeling Solution',
+      brand: 'the Ordinary',
+      img: featuredImg1
+    },
+    {
+      id: 2,
+      title: 'Facial Serum',
+      brand: 'the Ordinary',
+      img: featuredImg2
+    },
+    {
+      id: 3,
+      title: 'BB Cream',
+      brand: 'Missha',
+      img: featuredImg3
+    },
+    {
+      id: 4,
+      title: 'Moisturizer',
+      brand: 'Clinique',
+      img: featuredImg4
+    },
+  ]
+
   return <BlogContext.Provider value={{
-    blogPosts
+    blogPosts,
+    featuredProducts
   }}>
     {children}
   </BlogContext.Provider>

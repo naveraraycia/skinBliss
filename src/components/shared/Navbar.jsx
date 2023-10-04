@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom"
 function Navbar() {
 
   function handleClickScroll(idName){
@@ -18,7 +19,7 @@ function Navbar() {
     <>  
     <nav>
       <div className="flex justify-between pt-10">
-        <span className="font-garamond text-maroonDark text-3xl italic font-semibold">skinBliss</span>
+        <Link to='/' className="font-garamond text-maroonDark text-3xl italic font-semibold hover:cursor-pointer">skinBliss</Link>
         <ul className="hidden space-x-10 md:flex">
           <li onClick={() => handleClickScroll('home')} className="font-nunito duration-300 text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Home</li>
           <li onClick={() => handleClickScroll('featured')} className="font-nunito text-maroonDark font-semibold hover:text-pinkHover hover:cursor-pointer">Featured</li>

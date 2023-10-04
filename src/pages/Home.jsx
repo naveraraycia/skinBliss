@@ -3,8 +3,13 @@ import Navbar from '../components/shared/Navbar'
 import heroMobile from '../assets/imgs/hero-img-mobile.jpg'
 import heroDesktop from '../assets/imgs/hero-img-desktop.jpg'
 import heroGridImg from '../assets/imgs/hero-grid-img.jpg'
+import Heading from '../components/Heading'
+import FeaturedItem from '../components/FeaturedItem'
+import { useContext } from 'react'
+import BlogContext from '../context/BlogContext'
 
 function Home() {
+  const {featuredProducts} = useContext(BlogContext)
   return (
     <>
       <div className="container mx-auto px-5">
@@ -49,6 +54,23 @@ function Home() {
 
             <img src={heroGridImg} alt="skin cream" className='object-cover object-center w-full rounded-full h-[300px] py-5 md:order-1 md:w-fit' />
            
+          </div>
+        </section>
+
+        {/* <section id="featured" className='mt-24'> */}
+        <section id="featured" className='my-24'>
+          <div className="flex flex-col justify-center items-center space-y-10">
+            <Heading title='featured' subTitle='Top 4 products of the month' />
+
+            <div className="grid gap-8 grid-rows-4 md:grid-rows-1 md:grid-cols-4">
+            {featuredProducts.map((featuredItem, index) => {
+              if (index % 2 !== 0) {
+                return <FeaturedItem featuredItem={featuredItem} marginTop={true} />
+              }
+
+              return <FeaturedItem featuredItem={featuredItem} />
+            })}
+            </div>
           </div>
         </section>
       </div>
