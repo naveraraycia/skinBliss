@@ -17,7 +17,8 @@ module.exports = {
         pink: '#F9D6E2',
         pinkHover: '#D37495',
         pinkDarkHover: '#FF8EB5',
-        graphite: '#757575'
+        graphite: '#757575',
+        brownLight: '#9B7171'
       }
     },
   },

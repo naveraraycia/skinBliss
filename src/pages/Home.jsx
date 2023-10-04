@@ -15,6 +15,11 @@ import Footer from '../components/shared/Footer'
 function Home() {
   const {featuredProducts, blogPosts} = useContext(BlogContext)
 
+  function handleClickScroll(idName){
+    const sectionToScroll = document.getElementById(`${idName}`)
+    sectionToScroll.scrollIntoView({behavior: 'smooth'})
+  }
+
   return (
     <>
       <div className="container mx-auto px-5">
@@ -29,7 +34,9 @@ function Home() {
                 <p className='text-center text-lg md:text-left md:max-w-[350px]'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </p>
               </div>
 
-              <Button variant={'maroon'}>Learn More</Button>
+              <div className='w-fit' onClick={() => handleClickScroll('blog')}>
+                <Button variant={'maroon'}>Learn More</Button>
+              </div>
             </div>
 
             <img src={heroMobile} alt="skinBliss" className="object-cover object-center w-full h-[300px] md:hidden" />

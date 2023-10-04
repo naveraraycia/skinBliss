@@ -5,6 +5,7 @@ import {FaTiktok} from "react-icons/fa"
 
 
 function Footer(){
+  const yearToday = new Date().getUTCFullYear()
   return(
     <footer className="bg-maroon px-20 pt-20 pb-10 text-white flex flex-col justify-center items-center space-y-8 md:space-y-0 md:flex-row md:justify-between">
       <div className="flex items-center justify-center space-x-5">
@@ -26,7 +27,7 @@ function Footer(){
 
       <div className="space-y-1 flex flex-col justify-center items-center md:items-end">
         <span className="text-5xl font-garamond font-semibold italic">skinBliss</span>
-        <span className="font-nunito font-bold">&copy; 2023 RMFN</span>
+        <span className="font-nunito font-bold">&copy; {yearToday} RMFN</span>
       </div>
     </footer>
   )
