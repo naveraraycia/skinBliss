@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/shared/Navbar'
 import heroMobile from '../assets/imgs/hero-img-mobile.jpg'
 import heroDesktop from '../assets/imgs/hero-img-desktop.jpg'
+import heroGridImg from '../assets/imgs/hero-grid-img.jpg'
 
 function Home() {
   return (
@@ -10,12 +11,12 @@ function Home() {
         <Navbar />
 
         <section id="home">
-          <div className="flex flex-col mt-[5rem] space-y-24 lg:flex-row lg:space-y-0">
-            <div className="hero-description text-maroonDark flex flex-col justify-center items-center space-y-8 lg:w-1/2 lg:items-start xl:w-1/4">
-              <div className='max-w-[300px] space-y-10 lg:max-w-none z-20'>
-                <h1 className='font-garamond text-center text-4xl font-semibold italic lg:text-left lg:text-7xl lg:w-[800px]'>Achieve Healthy <span className='lg:ml-[10rem]'>Glowing Skin</span></h1>
+          <div className="flex flex-col mt-[5rem] space-y-24 md:flex-row md:space-y-0">
+            <div className="hero-description text-maroonDark flex flex-col justify-center items-center space-y-8 md:w-1/2 md:items-start xl:w-1/4">
+              <div className='max-w-[300px] space-y-10 md:max-w-none z-20'>
+                <h1 className='font-garamond text-center text-5xl font-semibold italic md:text-left md:text-7xl md:w-[800px]'>Achieve Healthy <span className='md:ml-[10rem]'>Glowing Skin</span></h1>
 
-                <p className='text-center text-lg lg:text-left lg:max-w-[350px]'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </p>
+                <p className='text-center text-lg md:text-left md:max-w-[350px]'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </p>
               </div>
 
               {/* Create button component */}
@@ -23,9 +24,31 @@ function Home() {
               {/*  */}
             </div>
 
-            <img src={heroMobile} alt="skinBliss" className="object-cover object-center w-full h-[300px] lg:hidden" />
+            <img src={heroMobile} alt="skinBliss" className="object-cover object-center w-full h-[300px] md:hidden" />
 
-            <img src={heroDesktop} alt="skinBliss" className="hidden object-cover object-center w-1/2 h-[350px] lg:block xl:w-3/4 xl:h-[550px]" />
+            <img src={heroDesktop} alt="skinBliss" className="hidden object-cover object-center w-1/2 h-[350px] md:block xl:w-3/4 xl:h-[550px]" />
+          </div>
+        </section>
+
+        <section id="about" className='mt-24'>
+          <div className="grid justify-items-center items-center grid-rows-4 text-maroonDark md:grid-rows-1 md:grid-cols-4 md:gap-8">
+            <div className='max-w-[350px] space-y-4 md:order-4'>
+              <h1 className='font-garamond font-semibold text-3xl text-center md:text-left md:text-2xl md:leading-[25px]'><span className='block'>Unveil</span>secrets to Youthful skin</h1>
+              <p className='font-nunito font-light text-center text-lg md:text-left  md:max-w-[250px]'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </p>
+            </div>
+
+            <div className='max-w-[350px] space-y-4 md:order-3'>
+              <h1 className='font-garamond font-semibold text-3xl text-center md:text-left md:text-2xl md:leading-[25px]'><span className='block'>Learn</span>skincare tips</h1>
+              <p className='font-nunito font-light text-center text-lg md:text-left md:max-w-[250px]'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </p>
+            </div>
+
+            <div className='max-w-[350px] space-y-4 md:order-2'>
+              <h1 className='font-garamond font-semibold text-3xl text-center md:text-left md:text-2xl md:leading-[25px]'><span className='block'>Discover</span>trending products</h1>
+              <p className='font-nunito font-light text-center text-lg md:text-left md:max-w-[250px]'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </p>
+            </div>
+
+            <img src={heroGridImg} alt="skin cream" className='object-cover object-center w-full rounded-full h-[300px] py-5 md:order-1 md:w-fit' />
+           
           </div>
         </section>
       </div>
