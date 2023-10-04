@@ -5,11 +5,14 @@ import heroDesktop from '../assets/imgs/hero-img-desktop.jpg'
 import heroGridImg from '../assets/imgs/hero-grid-img.jpg'
 import Heading from '../components/Heading'
 import FeaturedItem from '../components/FeaturedItem'
+import Button from '../components/Button'
 import { useContext } from 'react'
 import BlogContext from '../context/BlogContext'
+import CallToAction from '../components/CallToAction'
 
 function Home() {
   const {featuredProducts} = useContext(BlogContext)
+
   return (
     <>
       <div className="container mx-auto px-5">
@@ -24,9 +27,7 @@ function Home() {
                 <p className='text-center text-lg md:text-left md:max-w-[350px]'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </p>
               </div>
 
-              {/* Create button component */}
-              <button className='py-3 px-10 flex duration-300 bg-maroonLight font-garamond text-white text-xl hover:bg-pinkHover hover:cursor-pointer'>Learn More</button>
-              {/*  */}
+              <Button variant={'maroon'}>Learn More</Button>
             </div>
 
             <img src={heroMobile} alt="skinBliss" className="object-cover object-center w-full h-[300px] md:hidden" />
@@ -57,23 +58,26 @@ function Home() {
           </div>
         </section>
 
-        {/* <section id="featured" className='mt-24'> */}
-        <section id="featured" className='my-24'>
-          <div className="flex flex-col justify-center items-center space-y-10">
+        <section id="featured" className='mt-24'>
+          <div className="flex flex-col justify-center items-center space-y-16">
             <Heading title='featured' subTitle='Top 4 products of the month' />
 
             <div className="grid gap-8 grid-rows-4 md:grid-rows-1 md:grid-cols-4">
             {featuredProducts.map((featuredItem, index) => {
               if (index % 2 !== 0) {
-                return <FeaturedItem featuredItem={featuredItem} marginTop={true} />
+                return <FeaturedItem key={index} featuredItem={featuredItem} marginTop={true} />
               }
 
-              return <FeaturedItem featuredItem={featuredItem} />
+              return <FeaturedItem key={index} featuredItem={featuredItem} />
             })}
             </div>
           </div>
         </section>
+
       </div>
+        <section id="call-to-action" className='mt-32'>
+          <CallToAction />
+        </section>
     </>
   )
 }
